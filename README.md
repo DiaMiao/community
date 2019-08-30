@@ -1,15 +1,16 @@
 ### 社区项目
 
 ## 资料
-1. Springboot官方教程：https://spring.io/guides
-
-2. serving-web-content基本web组件: https://spring.io/guides/gs/serving-web-content/
-
-2. serving-web-content基本web组件：https://spring.io/guides/gs/serving-web-content/
-
-3. 参照网页：https://elasticsearch.cn/explore
+[参照网页（需求）](https://elasticsearch.cn/explore)
+[Springboot官方教程](https://spring.io/guides)
+[Springboot 基本web组件](https://spring.io/guides/gs/serving-web-content/)
+[bootstrap 文档](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+[github OAuth 文档](https://developer.github.com/apps/building-github-apps/)
 
 ## 工具
+
+
+## 常用命令
 1. git 常用命令
     
     git status 查看未提交文件状态
