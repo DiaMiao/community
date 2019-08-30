@@ -1,28 +1,25 @@
 ### 社区项目
 
 ## 资料
-[参照网页（需求）](https://elasticsearch.cn/explore)
-[Springboot官方教程](https://spring.io/guides)
-[Springboot 基本web组件](https://spring.io/guides/gs/serving-web-content/)
-[bootstrap 文档](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-[github OAuth 文档](https://developer.github.com/apps/building-github-apps/)
+[参照网页（需求）](https://elasticsearch.cn/explore)  
+[Springboot官方教程](https://spring.io/guides)  
+[Springboot 基本web组件](https://spring.io/guides/gs/serving-web-content/)  
+[bootstrap 文档](https://getbootstrap.com/docs/4.3/getting-started/introduction/)  
+[github OAuth 文档](https://developer.github.com/apps/building-github-apps/)  
 
 ## 工具
-
+[visual-paradigm画图工具](https://online.visual-paradigm.com)  
+[OkHttp处理网络数据请求工具](https://square.github.io/okhttp/)
 
 ## 常用命令
 1. git 常用命令
     
-    git status 查看未提交文件状态
+    git status 查看未提交文件状态      
+    git add . 添加当前文件目录所有文件到暂存中      
+    git commit -m "xxxx" 提交并备注      
+    git commit --amend --no-edit 追加之前的文件（相当于编辑修改之前的提交）    
+    git push 推送新代码  
     
-    git add . 添加当前文件目录所有文件到暂存中
-    
-    git commit -m "xxxx" 提交并备注
-    
-    git commit --amend --no-edit 追加之前的文件（相当于编辑修改之前的提交）
-  
-    git push 推送新代码
-
 2. Bootstrap 最简单的前端 UI 框架
 
     1. 字体图标：常用图标均为字体格式，相比图片加快了加载速度
@@ -31,4 +28,17 @@
     
 3. Intellij 快捷键整理
     1. 格式化代码：ctrl+alt+L
-    2. 全屏/恢复： ctrl+shift+F12
+    2. 编码窗口最大化/恢复： ctrl+shift+F12
+    3. 全局文件搜索：ctrl+shift+N
+    4. 提示参数：ctrl+P
+    5. 自动创建setter和getter ：alt+insert
+    6. 自动引入包：Alt+Enter
+    7. 快速创建变量：ctrl+alt+V
+    8. 自动换行并把光标移至最前：shift+Enter
+    
+    
+4. Github readme.md 文档书写
+    1. 换行：两个空格+回车  
+    2. 标题：井号
+    3. 链接：方括号内文本，圆括号内网址
+    
