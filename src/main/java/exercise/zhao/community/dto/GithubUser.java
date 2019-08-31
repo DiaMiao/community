@@ -2,7 +2,7 @@ package exercise.zhao.community.dto;
 
 public class GithubUser {
     private String name;
-    private long id;
+    private Long id;
     private String bio;
 
     public String getName() {
@@ -17,7 +17,7 @@ public class GithubUser {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

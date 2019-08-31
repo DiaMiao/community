@@ -35,8 +35,10 @@
     6. 自动引入包：Alt+Enter
     7. 快速创建变量：ctrl+alt+V
     8. 自动换行并把光标移至最前：shift+Enter
-    
-    
+    9. 自动输出System.out.println():sout+enter/tab
+    10. 快速将变量放入原文中 ctrl+alt+N
+    11. 切换窗口：最近打开过的窗口ctrl+E， 已经打开的窗口ctrl+Tab
+
 4. Github readme.md 文档书写
     1. 换行：两个空格+回车  
     2. 标题：井号
