@@ -37,16 +37,17 @@
     9. 自动输出System.out.println():sout+enter/tab
     10. 快速将变量放入原文中 ctrl+alt+N
     11. 切换窗口：最近打开过的窗口ctrl+E， 已经打开的窗口ctrl+Tab
-    12. 选中：ctrl+w 持续按w范围从小到大,按ctrl+shift+w，持续按w范围变小
+    12. 选中：ctrl+w 持续按w范围从小 到大,按ctrl+shift+w，持续按w范围变小
     13. 复制并粘贴选中内容：ctrl+D
     14. 重命名变量：shift+F6
     15. 自动移除无用import: ctrl + alt + o
-    
+    16. 对于数组对象，可以用.for方式来生成for each循环
     
 3. Github readme.md 文档书写
     1. 换行：两个空格+回车  
     2. 标题：井号
     3. 链接：方括号内文本，圆括号内网址
+    4. 添加代码：''' xxx （换行）代码正文''' 以某中语言格式显示
     
 ## 基本概念
 1. Bootstrap 最简单的前端 UI 框架
