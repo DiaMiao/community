@@ -14,7 +14,8 @@
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
 [OkHttp处理jason数据请求工具](https://square.github.io/okhttp/)  
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
-[flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)  每次的修改都创建新的migration,之后执行mvn flyway:migrate
+[flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：  
+    每次的修改都创建新的migration,之后执行mvn flyway:migrate  
 
 ## 常用命令
 1. git 常用命令
