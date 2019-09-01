@@ -6,14 +6,15 @@
 [Springboot 基本web组件](https://spring.io/guides/gs/serving-web-content/)  
 [bootstrap 文档](https://getbootstrap.com/docs/4.3/getting-started/introduction/)  
 [github OAuth 文档](https://developer.github.com/apps/building-github-apps/)  
+[MySQL基本语法](http://www.runoob.com/mysql/mysql-tutorial.html)  
 
 ## 工具
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
 [OkHttp处理jason数据请求工具](https://square.github.io/okhttp/)  
-[MySQL基本语法](http://www.runoob.com/mysql/mysql-tutorial.html)  
 [Maven仓库依赖查询](https://mvnrepository.com/)  
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
-[springboot 文档](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)
+[springboot 文档](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)  
+[flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)  每次的修改都创建新的migration,之后执行mvn flyway:migrate
 
 ## 常用命令
 1. git 常用命令
@@ -28,7 +29,7 @@
 2. Intellij 快捷键整理
     1. 格式化代码：ctrl+alt+L
     2. 编码窗口最大化/恢复： ctrl+shift+F12
-    3. 全局文件搜索：ctrl+shift+N
+    3. 全局文件搜索：ctrl+shift+N 或 按两次shift
     4. 提示参数：ctrl+P
     5. 自动创建setter和getter ：alt+insert
     6. 自动引入包/弹出提示：Alt+Enter
