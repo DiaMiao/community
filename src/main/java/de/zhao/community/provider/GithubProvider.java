@@ -1,8 +1,8 @@
-package exercise.zhao.community.provider;
+package de.zhao.community.provider;
 
 import com.alibaba.fastjson.JSON;
-import exercise.zhao.community.dto.AccessTokenDTO;
-import exercise.zhao.community.dto.GithubUser;
+import de.zhao.community.dto.AccessTokenDTO;
+import de.zhao.community.dto.GithubUser;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
 

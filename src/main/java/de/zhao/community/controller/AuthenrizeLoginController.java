@@ -1,16 +1,18 @@
-package exercise.zhao.community.controller;
+package de.zhao.community.controller;
 
-import exercise.zhao.community.dto.AccessTokenDTO;
-import exercise.zhao.community.dto.GithubUser;
-import exercise.zhao.community.provider.GithubProvider;
+import de.zhao.community.dto.AccessTokenDTO;
+import de.zhao.community.dto.GithubUser;
+import de.zhao.community.mapper.UserMapper;
+import de.zhao.community.model.User;
+import de.zhao.community.provider.GithubProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.UUID;
 
 @Controller
 public class AuthenrizeLoginController {
@@ -20,10 +22,15 @@ public class AuthenrizeLoginController {
 
     @Value("${github.client.id}") //此注解加载properties文件中相关的配置参数
     private String clientId;
+
     @Value("${github.client.secret}")
     private String clientSecret;
+
     @Value("${github.redirect.uri}")
     private String redirectUri;
+
+    @Autowired
+    private UserMapper userMapper;
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
@@ -37,13 +44,22 @@ public class AuthenrizeLoginController {
         accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
-        GithubUser user = githubProvider.getUser(accessToken);
+        GithubUser githubUser = githubProvider.getUser(accessToken);
 
-        if (user != null){
+        if (githubUser != null) {
+            //登录成功，把用户写入数据库
+            User user = new User();
+            user.setToken(UUID.randomUUID().toString());//自动生成随机uuid作为token
+            user.setName(githubUser.getName());
+            user.setAccountId(String.valueOf(githubUser.getId()));
+            user.setGmtCreate(System.currentTimeMillis());//系统毫秒数
+            user.setGmtModified(user.getGmtCreate());//此处创建和修改时间相同。
+            userMapper.insert(user);
+
             //登录成功，写cookie和session
-            request.getSession().setAttribute("user", user); //相当于创建了一个用户
+            request.getSession().setAttribute("user", githubUser); //相当于创建了一个用户
             return "redirect:/"; //重新定向，跳转到index页面。（原本成功后返回的地址为localhost:8080/callback?code=....)
-        }else{
+        } else {
             //登录失败，重新登录
             System.out.println("login failed.");
             return "redirect:/";

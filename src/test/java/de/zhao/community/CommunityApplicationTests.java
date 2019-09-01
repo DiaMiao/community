@@ -1,4 +1,4 @@
-package exercise.zhao.community;
+package de.zhao.community;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

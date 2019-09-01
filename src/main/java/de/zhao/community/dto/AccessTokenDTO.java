@@ -1,4 +1,4 @@
-package exercise.zhao.community.dto;
+package de.zhao.community.dto;
 
 //根据Github 文档，此处创建DIO包（data transfer object)，用来封装对象。
 // redirect需要传入5个参数，所以创建该对象

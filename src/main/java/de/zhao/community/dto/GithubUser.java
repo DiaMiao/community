@@ -1,4 +1,4 @@
-package exercise.zhao.community.dto;
+package de.zhao.community.dto;
 
 public class GithubUser {
     private String name;
