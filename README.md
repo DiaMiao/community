@@ -9,7 +9,7 @@
 
 ## 工具
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
-[OkHttp处理网络数据请求工具](https://square.github.io/okhttp/)
+[OkHttp处理jason数据请求工具](https://square.github.io/okhttp/)
 
 ## 常用命令
 1. git 常用命令
@@ -38,9 +38,19 @@
     9. 自动输出System.out.println():sout+enter/tab
     10. 快速将变量放入原文中 ctrl+alt+N
     11. 切换窗口：最近打开过的窗口ctrl+E， 已经打开的窗口ctrl+Tab
-
+    12. 选中：ctrl+w 持续按w范围从小到大,按ctrl+shift+w，持续按w范围变小
+    
 4. Github readme.md 文档书写
     1. 换行：两个空格+回车  
     2. 标题：井号
     3. 链接：方括号内文本，圆括号内网址
     
+## 基本概念
+1. session 和 cookie  
+    session 银行账户， cookie 银行卡(记住状态)， 服务器(domain)--银行    
+    
+    网页cookie存储信息  
+    f12-application-cookie查看。每个cookie都有过期时间。  
+    f12-network 渲染网页时，每条请求服务器的记录都会出现在这里。每次请求时，会在cookie中拿到相关信息，从而记住数据而不用每次都输入。
+    session 通过传入HttpServletRequest类型的对象来操作它（get,set等。  
+    web页面中，通过session可以获取页面登录状态

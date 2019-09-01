@@ -32,11 +32,10 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <a class="nav-link" href="https://github.com/login/oauth/authorize?client_id=d374568ca306b58c199f&redirect_uri=http://localhost:8080/callback&state=haha">Login <span class="sr-only">(current)</span></a>
-            <div class="nav-item dropdown">
+            <a th:if="${session.user == null}" class="nav-link" href="https://github.com/login/oauth/authorize?client_id=d374568ca306b58c199f&redirect_uri=http://localhost:8080/callback&state=haha">Login <span class="sr-only">(current)</span></a>
+            <div class="nav-item dropdown" th:unless="${session.user == null}">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Me
+                   aria-haspopup="true" aria-expanded="false" th:text="${session.user.getName()}">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">My profile</a>
