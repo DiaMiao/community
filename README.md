@@ -16,7 +16,7 @@
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
 [flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：  
     每次的修改都创建新的migration,之后执行mvn flyway:migrate  
-
+[Icon使用](https://fontawesome.com/icons)直接复制html引用即可使用
 ## 常用命令
 1. git 常用命令
     
@@ -46,10 +46,11 @@
     16. 对于数组对象，可以用.for方式来生成for each循环
     
 3. Github readme.md 文档书写
-    1. 换行：两个空格+回车  
-    2. 标题：井号
-    3. 链接：方括号内文本，圆括号内网址
-    4. 添加代码：\``` xxx （换行）代码正文\``` 以某中语言格式显示
+    1.[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+    2. 换行：两个空格+回车  
+    3. 标题：井号
+    4. 链接：方括号内文本，圆括号内网址
+    5. 添加代码：\``` xxx （换行）代码正文\``` 以某中语言格式显示
     
 ## 基本概念
 1. Bootstrap 最简单的前端 UI 框架
