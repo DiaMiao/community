@@ -1,4 +1,4 @@
-### 社区项目
+# Community (My Springboot exercise)
 
 ## 资料
 [参照网页（需求）](https://elasticsearch.cn/explore)  
@@ -14,9 +14,8 @@
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
 [OkHttp处理jason数据请求工具](https://square.github.io/okhttp/)  
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
-[flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：  
-    每次的修改都创建新的migration,之后执行mvn flyway:migrate  
-[Icon使用](https://fontawesome.com/icons)直接复制html引用即可使用
+[flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：--每次的修改都创建新的migration,之后执行mvn flyway:migrate  
+[Icon使用](https://fontawesome.com/icons) ：--直接复制html引用即可使用
 ## 常用命令
 1. git 常用命令
     
@@ -74,6 +73,9 @@
     3. MyBatis  
     一个Java持久化框架，它通过XML描述符或注解把对象与存储过程或SQL语句关联起来。 
 
+4. getMapping 和 post
+    1. get 渲染页面
+    2. post 执行请求
 
 ## 脚本
 1.bootstrap栅格  

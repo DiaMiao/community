@@ -47,7 +47,7 @@ public class AuthenrizeLoginController {
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
 
-        if (githubUser != null) {
+        if (githubUser != null && githubUser.getId() != 0) {
             //登录成功，把用户写入数据库
             User user = new User();
             String token = UUID.randomUUID().toString();
