@@ -56,7 +56,7 @@ public class AuthenrizeLoginController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());//系统毫秒数
             user.setGmtModified(user.getGmtCreate());//此处创建和修改时间相同。
-
+            user.setAvatarUrl(githubUser.getAvatarUrl());
             userMapper.insert(user);//用户数据写入数据库
 
             //把token写入cookie中

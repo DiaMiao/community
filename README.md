@@ -15,7 +15,9 @@
 [OkHttp处理jason数据请求工具](https://square.github.io/okhttp/)  
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
 [flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：--每次的修改都创建新的migration,之后执行mvn flyway:migrate  
-[Icon使用](https://fontawesome.com/icons) ：--直接复制html引用即可使用
+[Icon使用](https://fontawesome.com/icons) ：--直接复制html引用即可使用  
+[lombok工具](https://projectlombok.org/) ：--不用每次都加setter和getter,只需要添加@Data注解
+
 ## 常用命令
 1. git 常用命令
     
@@ -44,8 +46,8 @@
     15. 自动移除无用import: ctrl + alt + o
     16. 对于数组对象，可以用.for方式来生成for each循环
     
-3. Github readme.md 文档书写
-    1.[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+3. Github readme.md 文档书写  
+    1. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
     2. 换行：两个空格+回车  
     3. 标题：井号
     4. 链接：方括号内文本，圆括号内网址
