@@ -9,6 +9,7 @@
 [MySQL基本语法](http://www.runoob.com/mysql/mysql-tutorial.html)  
 [Maven仓库依赖查询](https://mvnrepository.com/)  
 [springboot 文档](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)  
+[thymeleaf 文档](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)  
 
 ## 工具
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
@@ -45,7 +46,7 @@
     14. 重命名变量：shift+F6
     15. 自动移除无用import: ctrl + alt + o
     16. 对于数组对象，可以用.for方式来生成for each循环
-    
+    17. 进入定义：ctrl+B
 3. Github readme.md 文档书写  
     1. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
     2. 换行：两个空格+回车  
@@ -78,6 +79,7 @@
 4. getMapping 和 post
     1. get 渲染页面
     2. post 执行请求
+    
 
 ## 脚本
 1.bootstrap栅格  
