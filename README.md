@@ -10,6 +10,7 @@
 [Maven仓库依赖查询](https://mvnrepository.com/)  
 [springboot 文档](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)  
 [thymeleaf 文档](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)  
+[data&time cheatsheet](https://devhints.io/datetime)  
 
 ## 工具
 [visual-paradigm画图工具](https://online.visual-paradigm.com)  
@@ -17,7 +18,11 @@
 [Mybatis Springboot 文档](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
 [flyway 处理不同数据库版本](https://flywaydb.org/getstarted/why)：--每次的修改都创建新的migration,之后执行mvn flyway:migrate  
 [Icon使用](https://fontawesome.com/icons) ：--直接复制html引用即可使用  
-[lombok工具](https://projectlombok.org/) ：--不用每次都加setter和getter,只需要添加@Data注解
+[lombok工具](https://projectlombok.org/) ：--不用每次都加setter和getter,只需要添加@Data注解  
+[SpringBoot热部署工具：developer tools](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools-livereload)  
+[Chrome插件：liveReload自动加载修改后的页面，无需手动刷新](http://livereload.com/extensions/)  
+
+
 
 ## 常用命令
 1. git 常用命令
@@ -87,3 +92,10 @@
 ```html
 <div class="col-lg-9 col-md-12"></div>
 ```  
+
+2. 常用sql命令
+限制页码：limit （每次n行）OFFSET （从第m个开始）
+
+```sql
+select * from QUESTION limit 5 offset 5;
+```

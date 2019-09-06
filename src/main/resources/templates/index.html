@@ -66,7 +66,7 @@
             <h2 style="padding-top: 15px"><i class="fas fa-list"></i> Explore</h2>
             <hr>
 
-            <div class="media" th:each="question : ${questions}">
+            <div class="media" th:each="question : ${pagination.questions}">
                 <img class="mr-3 userAvatar rounded" th:src="${question.user.avatarUrl}">
                 <div class="media-body">
                     <h5 class="mt-0" th:text="${question.title}"></h5>
@@ -74,12 +74,44 @@
                     <span class="question-info">
                         <span th:text="${question.commentCount}"></span> replies -
                         <span th:text="${question.viewCount}"></span> views -
-                        <span th:text="${#dates.format(question.gmtModified,'dd/mm/yyyy')}"></span>
+                        <span th:text="${#dates.format(question.gmtModified,'dd/MM/yyyy HH:mm:ss')}"></span>
                     </span>
                 </div>
             </div>
 
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li th:if="${pagination.showFirstPage}">
+                        <a class="page-link" th:href="@{/(page=1)}" aria-label="FirstPage">
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pagination.showPrevious}">
+                        <a class="page-link" th:href="@{/(page=${pagination.page}-1)}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li th:each="page:${pagination.pages}" th:class="${pagination.page == page}? 'page-item active':'page-item'">
+                        <a class="page-link" th:href="@{/(page=${page})}"
+                           th:text="${page}"></a>
+                    </li>
+
+                    <li th:if="${pagination.showNext}">
+                        <a class="page-link" th:href="@{/(page=${pagination.page+1})}" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pagination.showEndPage}">
+                        <a class="page-link" th:href="@{/(page=${pagination.totalPage})}" aria-label="EndPage">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
+
+
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <h2 style="padding-top: 15px">What's new</h2>
             <hr>
