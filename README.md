@@ -9,7 +9,7 @@
 [MySQL基本语法](http://www.runoob.com/mysql/mysql-tutorial.html)  
 [Maven仓库依赖查询](https://mvnrepository.com/)  
 [springboot 文档](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)  
-[thymeleaf 文档](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html)  
+[thymeleaf 文档](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)  
 [data&time cheatsheet](https://devhints.io/datetime)  
 
 ## 工具
@@ -58,7 +58,10 @@
     3. 标题：井号
     4. 链接：方括号内文本，圆括号内网址
     5. 添加代码：\``` xxx （换行）代码正文\``` 以某中语言格式显示
-    
+   
+4. web页面控制台-console 
+    1. 输入$符浩，返回值表示js调用成功
+    2. 输入$(“类/id”)，即可快速查看含有该类/id的元素。
 ## 基本概念
 1. Bootstrap 最简单的前端 UI 框架
 
