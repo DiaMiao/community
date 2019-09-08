@@ -56,6 +56,7 @@
     16. 对于数组对象，可以用.for方式来生成for each循环
     17. 进入定义：ctrl+B  
     18. ctrl+alt+左/右： 回退/前进到上次查看代码的地方  
+    19. 查看所有依赖：alt+F7  
     
     
 3. Github readme.md 文档书写  
@@ -102,9 +103,14 @@
 <div class="col-lg-9 col-md-12"></div>
 ```  
 
-2. 常用sql命令
-限制页码：limit （每次n行）OFFSET （从第m个开始）
+2. 常用sql命令  
 
-```sql
+限制页码：limit （每次n行）OFFSET （从第m个开始）
+```mysql
 select * from QUESTION limit 5 offset 5;
+```
+
+mybatis执行语句
+```bash
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```

@@ -27,7 +27,8 @@
                     <h5 class="mt-0" >
                         <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                     </h5>
-                    <span th:text="${question.description}"></span> <br>
+                    <span th:text="${question.description}"></span>
+                    <br>
                     <span class="question-info">
                         <span th:text="${question.commentCount}"></span> replies -
                         <span th:text="${question.viewCount}"></span> views -
