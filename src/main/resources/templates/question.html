@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${question.title}"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/community.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<div th:replace="navigation :: nav"></div>
+<div class="container-fluid">
+    <div class="row main profile">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h4 style="padding-top: 15px"><span th:text="${question.title}"></span></h4>
+            <span class="question-info">
+                Created by: <span th:text="${question.user.name}"></span> |
+                Created on: <span th:text="${#dates.format(question.gmtModified,'dd/MM/yyyy HH:mm:ss')}"></span> |
+                View: <span th:text="${question.viewCount}"></span>
+            </span>
+            <hr>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}"></div>
+            <hr>
+            <a class="community-menu" th:href="@{'/publish/'+${question.id}}"
+               th:if="${session.user != null && session.user.id == question.creator}">
+                <i class="fas fa-edit"></i> Edit</a>
+        </div>
+
+        <div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <h4>Questioner</h4>
+                <div class="media">
+                    <img class="mr-3 userAvatar rounded-circle" th:src="${question.user.avatarUrl}">
+                    <div class="media-body">
+                        <h6 class="mt-0">
+                            <span th:text="${question.user.name}"></span>
+                        </h6>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>Related</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

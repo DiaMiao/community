@@ -1,10 +1,12 @@
 package de.zhao.community.mapper;
 
+import de.zhao.community.dto.QuestionDTO;
 import de.zhao.community.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -24,4 +26,8 @@ public interface QuestionMapper {
 
     @Select("select count(*) from question where creator = #{userId}")
     Integer countByUserID(@Param(value = "userId") Integer userId);
+
+
+    @Select("select * from question where id = #{id}")
+    Question getById(@Param(value = "id") Integer id);
 }

@@ -54,7 +54,10 @@
     14. 重命名变量：shift+F6
     15. 自动移除无用import: ctrl + alt + o
     16. 对于数组对象，可以用.for方式来生成for each循环
-    17. 进入定义：ctrl+B
+    17. 进入定义：ctrl+B  
+    18. ctrl+alt+左/右： 回退/前进到上次查看代码的地方  
+    
+    
 3. Github readme.md 文档书写  
     1. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
     2. 换行：两个空格+回车  

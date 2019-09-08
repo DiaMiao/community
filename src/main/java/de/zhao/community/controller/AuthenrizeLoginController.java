@@ -5,6 +5,7 @@ import de.zhao.community.dto.GithubUser;
 import de.zhao.community.mapper.UserMapper;
 import de.zhao.community.model.User;
 import de.zhao.community.provider.GithubProvider;
+import de.zhao.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -32,6 +34,9 @@ public class AuthenrizeLoginController {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
@@ -54,10 +59,8 @@ public class AuthenrizeLoginController {
             user.setToken(token);//自动生成随机uuid作为token
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setGmtCreate(System.currentTimeMillis());//系统毫秒数
-            user.setGmtModified(user.getGmtCreate());//此处创建和修改时间相同。
             user.setAvatarUrl(githubUser.getAvatarUrl());
-            userMapper.insert(user);//用户数据写入数据库
+            userService.createOrUpdate(user);
 
             //把token写入cookie中
             response.addCookie(new Cookie("token", token));
@@ -69,5 +72,16 @@ public class AuthenrizeLoginController {
             System.out.println("login failed.");
             return "redirect:/";
         }
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response) {
+        request.getSession().removeAttribute("user");
+        Cookie cookie = new Cookie("token", null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
+
     }
 }
