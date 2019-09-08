@@ -2,7 +2,6 @@ package de.zhao.community.controller;
 
 import de.zhao.community.dto.AccessTokenDTO;
 import de.zhao.community.dto.GithubUser;
-import de.zhao.community.mapper.UserMapper;
 import de.zhao.community.model.User;
 import de.zhao.community.provider.GithubProvider;
 import de.zhao.community.service.UserService;
@@ -31,9 +30,6 @@ public class AuthenrizeLoginController {
 
     @Value("${github.redirect.uri}")
     private String redirectUri;
-
-    @Autowired
-    private UserMapper userMapper;
 
     @Autowired
     private UserService userService;

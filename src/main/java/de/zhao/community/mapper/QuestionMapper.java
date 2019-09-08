@@ -1,12 +1,7 @@
 package de.zhao.community.mapper;
 
-import de.zhao.community.dto.QuestionDTO;
 import de.zhao.community.model.Question;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Service;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -30,4 +25,7 @@ public interface QuestionMapper {
 
     @Select("select * from question where id = #{id}")
     Question getById(@Param(value = "id") Integer id);
+
+    @Update("update question set title = #{title}, description=#{description}, gmt_modified =#{gmtModified}, tag=#{tag} where id= #{id}")
+    void update(Question question);
 }
