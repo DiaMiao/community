@@ -4,19 +4,15 @@ import de.zhao.community.model.User;
 import lombok.Data;
 
 @Data
-public class QuestionDTO {
+public class CommentDTO {
     private Long id;
-    private String title;
-    private String description;
-    private String tag;
+    private Long parentId;
+    private Integer parentType;
+    private Long commentator;
     private Long gmtCreate;
     private Long gmtModified;
-    private Long creator;
-    private Integer viewCount;
-    private Integer commentCount;
     private Integer likeCount;
-
+    private String text;
     private User user;
-
-
+    private Integer commentCount;
 }

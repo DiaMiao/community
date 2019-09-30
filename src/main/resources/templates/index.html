@@ -12,6 +12,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+<script type="application/javascript">
+    window.onload = function () {
+        var closable = window.localStorage.getItem("closable");
+        if(closable == "true"){
+            window.close();
+            window.localStorage.removeItem("closable");
+        }
+    }
+</script>
 
 <body>
 <div th:replace="navigation :: nav"></div>
@@ -24,11 +33,9 @@
             <div class="media" th:each="question : ${pagination.questions}">
                 <img class="mr-3 userAvatar rounded" th:src="${question.user.avatarUrl}">
                 <div class="media-body">
-                    <h5 class="mt-0" >
+                    <h5>
                         <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                     </h5>
-                    <span th:text="${question.description}"></span>
-                    <br>
                     <span class="question-info">
                         <span th:text="${question.commentCount}"></span> replies -
                         <span th:text="${question.viewCount}"></span> views -

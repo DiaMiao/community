@@ -13,8 +13,8 @@ body {
 }
 
 .userAvatar {
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
 }
 
 .question-info {
@@ -22,12 +22,108 @@ body {
     font-weight: normal;
     color: #999;
 }
+.question-ad {
+    line-height: 26px;
+    color: #999;
+    font-size: 13px;
+}
+
+.question-related{
+    line-height: 26px;
+    color: #999;
+    list-style: none;
+    font-size: 13px;
+}
+.question-tag {
+    margin-right: 16px;
+}
 
 .profile .section {
     margin-top: 15px;
 }
 
-.community-menu{
-    color:#999;
-    font-size: 13px;
+.community-menu {
+    color: #999;
+    font-size: 14px;
+}
+
+.community-question {
+    padding: 12px;
+}
+
+.jumbotron {
+    margin: 50px;
+    border-radius: .3rem;
+    background-color: lightgray;
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+    margin: 15px;
+}
+
+.btn-comment {
+    float: right;
+    margin: 10px 0;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.comments {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+
+.sub-comments {
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.sub-comments .btn {
+    margin: 10px 0;
+}
+
+.comment-sp {
+    margin-top: 0;
+}
+
+.comment-input {
+    margin-top: 10px;
+}
+
+.menu {
+    color: #999;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.menu .icon {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.menu .active {
+    color: #499ef3;
+}
+
+.menu .icon:hover {
+    color: #499ef3;
+}
+
+.community-right {
+    margin: 12px;
+    padding-top: 15px;
 }

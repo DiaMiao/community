@@ -24,7 +24,9 @@
             <div class="media" th:each="question : ${pagination.questions}">
                 <img class="mr-3 userAvatar rounded" th:src="${question.user.avatarUrl}">
                 <div class="media-body">
-                    <h5 class="mt-0" th:text="${question.title}"></h5>
+                    <h5 class="mt-0">
+                        <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
+                    </h5>
                     <span class="question-info">
                         <span th:text="${question.commentCount}"></span> replies -
                         <span th:text="${question.viewCount}"></span> views -

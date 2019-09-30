@@ -24,7 +24,8 @@
 [lombok工具](https://projectlombok.org/) ：--不用每次都加setter和getter,只需要添加@Data注解  
 [SpringBoot热部署工具：developer tools](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools-livereload)  
 [Chrome插件：liveReload自动加载修改后的页面，无需手动刷新](http://livereload.com/extensions/)  
-
+[Postman接口测试,模拟请求](chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff/index.html)  
+[Json online](https://jsoneditoronline.org/)
 
 
 ## 常用命令
@@ -44,7 +45,7 @@
     4. 提示参数：ctrl+P
     5. 自动创建setter和getter ：alt+insert
     6. 自动引入包/弹出提示：Alt+Enter
-    7. 快速创建变量：ctrl+alt+V
+    7. 快速创建变量：ctrl+alt+V 快速创建方法：ctrl+alt+m 快速创建参数：ctrl+alt+P
     8. 自动换行并把光标移至最前：shift+Enter
     9. 自动输出System.out.println():sout+enter/tab
     10. 快速将变量放入原文中 ctrl+alt+N
@@ -57,6 +58,9 @@
     17. 进入定义：ctrl+B  
     18. ctrl+alt+左/右： 回退/前进到上次查看代码的地方  
     19. 查看所有依赖：alt+F7  
+    20. 全局搜索（某个消息/方法找不到时用）：ctrl+shift+f   
+    21. 修改某个方法的变量：ctrl+F6  
+    22. 
     
     
 3. Github readme.md 文档书写  
